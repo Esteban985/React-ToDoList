@@ -138,9 +138,8 @@ body {
     color: #cbd5e1;
 }
 
-.todo-icon-check:hover,
-.todo-item-completed .todo-icon-check {
-    color: #20c997;
+.todo-icon-check:hover svg {
+    fill: aqua;
 }
 
 /* Icono de Delete (X) */
@@ -149,8 +148,8 @@ body {
     margin-left: auto;
 }
 
-.todo-icon-delete:hover {
-    color: #ff6b6b;
+.todo-icon-delete:hover svg{
+    fill: red;
     transform: scale(1.2);
 }
 

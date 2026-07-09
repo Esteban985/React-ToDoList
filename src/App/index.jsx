@@ -1,23 +1,24 @@
 import React, { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 
-import { TodoCounter } from './TodoCounter'
-import { TodoSearch } from './TodoSearch'
-import { TodoList } from './TodoList'
-import { TodoItem } from './TodoItem'
-import { CreateTodoButton } from './CreateTodoButton'
+import { TodoCounter } from '../TodoCounter'
+import { TodoSearch } from '../TodoSearch'
+import { TodoList } from '../TodoList'
+import { TodoItem } from '../TodoItem'
+import { CreateTodoButton } from '../CreateTodoButton'
+import { useLocalStorage } from './useLocalStorage'
 
-const defaultTodos = [
-  { text: 'llorar con la llorona', completed: false },
-  { text: 'Cortar cebolla', completed: false },
-  { text: 'Aprender jsx', completed: false },
-  { text: 'jugar', completed: true }
-]
+// const defaultTodos = [
+//   { text: 'llorar con la llorona', completed: false },
+//   { text: 'Cortar cebolla', completed: false },
+//   { text: 'Aprender jsx', completed: false },
+//   { text: 'jugar', completed: true }
+// ]
+
+// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos))
+// localStorage.removeItem('TODOS_V1')
 
 function App() {
-  const [todos, setTodos] = React.useState(defaultTodos)
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', [])
 
   const [searchValue, setSearchValue] = React.useState('');
 
@@ -39,7 +40,7 @@ function App() {
     )
 
     newTodos[todoIndex].completed = newTodos[todoIndex].completed ? false : true;
-    setTodos(newTodos)
+    saveTodos(newTodos)
   }
 
   const deleteTodo = (text) => {
@@ -48,7 +49,7 @@ function App() {
       (todo) => todo.text == text
     )
     newTodos.splice(todoIndex, 1)
-    setTodos(newTodos)
+    saveTodos(newTodos)
   }
 
   return (
