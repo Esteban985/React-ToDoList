@@ -1,0 +1,81 @@
+.LoadingTodo-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    width: 100%;
+    min-height: 64px;
+
+    padding: 18px 22px;
+    margin-top: 24px;
+
+    background: #ffffff;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .08);
+}
+
+/* Icono izquierdo */
+.LoadingTodo-completeIcon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    background: linear-gradient(90deg,
+            #ececec 25%,
+            #f8f8f8 50%,
+            #ececec 75%);
+
+    background-size: 300% 100%;
+    animation: loading 1.3s infinite;
+}
+
+/* Texto */
+.LoadingTodo-Text {
+    flex: 1;
+
+    height: 18px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(90deg,
+            #ececec 25%,
+            #f8f8f8 50%,
+            #ececec 75%);
+
+    background-size: 300% 100%;
+    animation: loading 1.3s infinite;
+}
+
+/* Icono derecho */
+.LoadingTodo-deleteIcon {
+    width: 22px;
+    height: 22px;
+
+    border-radius: 6px;
+
+    flex-shrink: 0;
+
+    background: linear-gradient(90deg,
+            #ececec 25%,
+            #f8f8f8 50%,
+            #ececec 75%);
+
+    background-size: 300% 100%;
+    animation: loading 1.3s infinite;
+}
+
+/* Animación */
+@keyframes loading {
+
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+
+}
