@@ -1,16 +1,173 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📝 React ToDo List
 
-Currently, two official plugins are available:
+Una aplicación moderna de gestión de tareas desarrollada con **React** y **Vite**, enfocada en poner en práctica conceptos fundamentales e intermedios de React como componentes, Hooks, Context API y renderizado condicional.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<!-- Coloca aquí tu GIF o captura principal -->
+<img src="./public/preview.png" alt="React ToDo List Preview" width="900"/>
 
-## React Compiler
+<br>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-Latest-646CFF?logo=vite)](https://vitejs.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 🚀 Demo
+
+### 🌐 GitHub Pages
+
+> **Próximamente**
+
+🔗 **Demo:** `https://esteban985.github.io/React-ToDoList/`
+
+---
+
+# 📸 Captura de pantalla
+
+<div align="center">
+
+<img src="./public/Captura desde 2026-07-13 15-07-26.png" width="900" alt="Captura de la aplicación">
+
+</div>
+
+---
+
+# ✨ Características
+
+- ✅ Crear nuevas tareas.
+- ✅ Marcar tareas como completadas.
+- ✅ Eliminar tareas.
+- ✅ Buscar tareas en tiempo real.
+- ✅ Contador de tareas completadas.
+- ✅ Estado vacío cuando no existen tareas.
+- ✅ Mensajes personalizados cuando la búsqueda no encuentra resultados.
+- ✅ Persistencia de datos mediante Local Storage.
+- ✅ Modal para agregar nuevas tareas.
+- ✅ Skeleton Loading durante la carga inicial.
+- ✅ Diseño responsive.
+
+---
+
+# 🛠️ Tecnologías utilizadas
+
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS3
+- HTML5
+- Context API
+- React Hooks
+
+---
+
+# 📂 Estructura del proyecto
+
+```text
+src/
+│
+├── Components/
+│   ├── TodoItem/
+│   ├── TodoList/
+│   ├── TodoCounter/
+│   ├── TodoSearch/
+│   ├── TodoForm/
+│   ├── Modal/
+│   ├── LoadingTodo/
+│   └── ...
+│
+├── TodoContext/
+│
+├── hooks/
+│
+├── assets/
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+# ⚙️ Instalación
+
+Clona el repositorio
+
+```bash
+git clone https://github.com/Esteban985/React-ToDoList.git
+```
+
+Entra a la carpeta
+
+```bash
+cd React-ToDoList
+```
+
+Instala las dependencias
+
+```bash
+npm install
+```
+
+Ejecuta el proyecto
+
+```bash
+npm run dev
+```
+
+Para generar la versión de producción
+
+```bash
+npm run build
+```
+
+---
+
+# 🎯 Objetivo del proyecto
+
+Este proyecto fue desarrollado como práctica para fortalecer conocimientos en React, aplicando conceptos como:
+
+- Componentización
+- Props
+- Hooks
+- useState
+- useEffect
+- Context API
+- Renderizado condicional
+- Manejo de estados
+- Persistencia con Local Storage
+- Diseño responsive
+
+---
+
+# 📈 Futuras mejoras
+
+- [ ] Categorías de tareas.
+- [ ] Fechas límite.
+- [ ] Prioridades.
+- [ ] Drag & Drop.
+- [ ] Modo oscuro.
+- [ ] Sincronización con Firebase.
+- [ ] Animaciones más avanzadas.
+
+---
+
+# 👨‍💻 Autor
+
+**Esteban Mente**
+
+GitHub:
+
+https://github.com/Esteban985
+
+---
+
+<div align="center">
+
+⭐ Si este proyecto te gustó, considera dejar una estrella.
+
+</div>
