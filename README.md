@@ -4,9 +4,6 @@
 
 Una aplicación moderna de gestión de tareas desarrollada con **React** y **Vite**, enfocada en poner en práctica conceptos fundamentales e intermedios de React como componentes, Hooks, Context API y renderizado condicional.
 
-<!-- Coloca aquí tu GIF o captura principal -->
-<img src="./public/preview.png" alt="React ToDo List Preview" width="900"/>
-
 <br>
 
 [![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
