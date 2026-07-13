@@ -1,0 +1,178 @@
+.todo-not-found {
+    position: relative;
+    background-color: #050b05;
+    /* Fondo ultra oscuro */
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 255, 70, 0.2),
+        0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Fondo de código Matrix */
+.matrix-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    /* Sutil para que no opaque el texto principal */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    user-select: none;
+    pointer-events: none;
+    font-size: 0.85rem;
+    color: #00ff46;
+    white-space: nowrap;
+}
+
+/* Animación de lluvia/desplazamiento de binario */
+.binary-line {
+    animation: matrix-shift 6s linear infinite;
+}
+
+.binary-line.delay-1 {
+    animation-delay: 1.5s;
+}
+
+.binary-line.delay-2 {
+    animation-delay: 3s;
+}
+
+.binary-line.delay-3 {
+    animation-delay: 4.5s;
+}
+
+/* Contenedor de contenido */
+.matrix-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Icono con lupa y barra de escaneo */
+.matrix-icon {
+    position: relative;
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 10px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.scanner-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00ff46;
+    box-shadow: 0 0 8px #00ff46;
+    animation: scan 2s linear infinite;
+}
+
+/* Título principal parpadeante estilo Glitch/Glow */
+.matrix-title {
+    color: #00ff46;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    text-shadow: 0 0 8px rgba(0, 255, 70, 0.6), 0 0 15px rgba(0, 255, 70, 0.4);
+    animation: glitch-blink 4s infinite;
+}
+
+/* Texto secundario */
+.matrix-text {
+    color: #ffffff;
+    font-size: 0.95rem;
+    max-width: 280px;
+    margin: 0 auto;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* --- ANIMACIONES KEYFRAMES --- */
+
+/* 1. Desplazamiento del fondo binario */
+@keyframes matrix-shift {
+    0% {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+}
+
+/* 2. Línea de escaneo vertical */
+@keyframes scan {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+/* 3. Parpadeo sutil de terminal en el título */
+@keyframes glitch-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    94% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0.4;
+    }
+
+    96% {
+        opacity: 1;
+    }
+
+    97% {
+        opacity: 0.2;
+    }
+
+    98% {
+        opacity: 1;
+    }
+}
+
+/* 4. Efecto latido para el icono */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
